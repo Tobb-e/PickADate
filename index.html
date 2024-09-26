@@ -3,19 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculate Date</title>
+    <title>Date Calculator</title>
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
     <div class="container">
-        <h1>Pick a Date and Calculate</h1>
-        <p>Calculate weeks and days between todays date and the selected date</p>
+        <h1>Date Calculator</h1>
+        <p>Calculate the difference between the current date and a selected date, or calculate a future date based on the number of weeks.</p>
 
-        <label for="date">Pick a date:</label>
-        <input type="date" id="date" name="date">
-        <button onclick="calculate()">Calculate</button>
-        <p id="result"></p>
-    </div> 
+        <!-- First function: Pick a date -->
+        <div class="section">
+            <h2>Calculate Date Difference</h2>
+            <label for="date">Pick a date:</label>
+            <input type="date" id="date" name="date">
+            <button onclick="calculate()">Calculate Difference</button>
+            <!-- Result for the first function -->
+            <p id="result-difference"></p>
+        </div>
+
+        <!-- Second function: Enter weeks and calculate future date -->
+        <div class="section section-future">
+            <h2>Calculate Future Date</h2>
+            <label for="startDate">Pick a start date:</label>
+            <input type="date" id="startDate" name="startDate">
+            <label for="weeks">Enter number of weeks:</label>
+            <input type="number" id="weeks" name="weeks" placeholder="Enter weeks">
+            <button onclick="calculateFutureDate()">Calculate Future Date</button>
+            <!-- Result for the second function -->
+            <p id="result-future"></p>
+        </div>
+    </div>
+    
     <script src="js/script.js"></script>
 </body>
 </html>
